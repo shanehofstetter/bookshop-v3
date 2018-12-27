@@ -1,24 +1,50 @@
-# README
+# Bookshop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
 
-Things you may want to cover:
+* Rails API
+    * devise token authentication
+    * api-only 
+* React App
+    * built with create-react-app, independent from rails app
+    * Semantic UI
+    * list and add books
+        * books get fetched from rails api ([axios](https://github.com/axios/axios))
+        * bootstrap form inputs with error rendering ([informed](https://joepuzzo.github.io/informed/) + custom)
+    * I18n support (translations loaded from rails api) ([i18next](https://github.com/i18next/react-i18next))
+    * Websocket/Actioncable example included ([react-actioncable-provider](https://github.com/cpunion/react-actioncable-provider))
+    * Mobx
+    * devise token authentication
+    * login/logout
 
-* Ruby version
+## Setup
 
-* System dependencies
+Install the libraries:
+```bash
+$ bundle install
+$ cd client && npm i
+```
 
-* Configuration
+Setup database:
+```
+$ rails db:setup
+```
 
-* Database creation
 
-* Database initialization
+### Semantic UI
+Built Files are checked-in, therefore building is only required when you change the theme config.  
 
-* How to run the test suite
+Build Semantic-UI Theme:
+```
+$ cd client/src/semantic-ui && gulp build
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Run
 
-* Deployment instructions
+```
+npm run serve
+```
 
-* ...
+This starts the rails server plus the webpack dev server (with hot reload).
+Meaning react app will get compiled automatically on save and browser will hot-reload it.
+
