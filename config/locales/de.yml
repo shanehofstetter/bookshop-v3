@@ -29,26 +29,27 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+de:
   form:
-    submit: Save
-    login: Login
+    submit: Speichern
+    login: Anmelden
 
   link:
+    home: Startseite
     details: Details
-    back: Back
-    create: Create
+    back: Zurück
+    create: Erstellen
 
   activerecord:
     models:
       book:
-        one: Book
-        other: Books
+        one: Buch
+        other: Bücher
     attributes:
       book:
-        title: Title
-        description: Description
+        title: Titel
+        description: Beschreibung
         isbn: ISBN
       user:
         email: E-Mail
-        password: Password
+        password: Passwort
