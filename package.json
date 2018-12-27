@@ -1,0 +1,7 @@
+{
+    "name": "bookshop-v3",
+    "private": true,
+    "scripts": {
+        "serve": "foreman start -f Procfile.dev"
+    }
+}
